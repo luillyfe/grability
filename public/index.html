@@ -21,12 +21,20 @@
             <path d="M2 6h20v3H2zm0 5h20v3H2zm0"/>
           </svg>
         </a>
-        <h1 class="head ellipsis"><p class="id_new">1</p>
+        <!-- <h1 class="head ellipsis"><p class="id_new">1</p>
           <p class="title_new ellipsis uppercase">AGOTADO CHALECO DOBLE FAZ BOGOTÁ HUMANA/CLARA ALCALDESA</p>
         </h1>
-      </nav>
+ -->      </nav>
 
-      <main>
-      </main>
+      <main></main>
+
+      <script>
+        $(document).ready(function() {
+          $('#menu').click(function() {
+            $('.top_news').css("visibility", "visible")
+            $('.top_news').children('h1.head').css("visibility", "visible")
+          });
+        });
+      </script>
   </body>
 </html>

@@ -18,9 +18,10 @@ main {
   order: 1;
 
   height: 10%;
+  /*height: 82px;*/
   width: 10%;
-  margin-left: 5%;
-  margin-right: auto;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .container {
@@ -55,6 +56,7 @@ main {
 .nav .head {
   padding: 2% 0;
   padding: 9.59375px 0;
+  /*margin: 10px;*/
   font-size: 0.7em;
 }
 
@@ -95,13 +97,13 @@ section .title_new {
 .ellipsis {
   text-overflow: ellipsis;
 
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   overflow: hidden;
 }
 
 .top_news {
   max-width: 80%;
-  margin: 0 auto;
+  margin: 5px auto;
 
   color: #000000;
   background-color: #FFFFFF;
@@ -120,8 +122,8 @@ section .title_new {
 .intro_news {
   order: 1;
 
-  max-width: 35%;
-  margin: 0 auto;
+  max-width: 25%;
+  margin: 0 10px;
 }
 
 .img_preview {

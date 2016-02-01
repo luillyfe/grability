@@ -1,21 +1,18 @@
 
 'use strict';
 
-/**  Get the news **/
-/** "/api/news_mock.json" **/
+/**  
+  * Get the news
+  * "/api/news_mock.json" 
+ **/
 var NewsWorkIt = function (url) {
   this._urlGet = url,
   this._oReq = new XMLHttpRequest(),
   this._news = 'error'
 
   this.reqListener = function() {
-  	var data = JSON.parse(this.responseText)
-    //console.log(json)
-  	
-  	//json.forEach(function (item) {
-  	  //console.log(main)
-      addNewsMenu(data)
-    //})
+    //console.log(JSON.parse(this.responseText)
+  	addNewsMenu(JSON.parse(this.responseText))
   },
 
   this.makeRequest = function () {
@@ -31,8 +28,8 @@ newsWorkItOne.makeRequest()
 
 
 /**
-   Add the news to the page
-**/
+  * Add the news to the page
+ **/
 var addNewsMenu = function (data) {
   var main = document.querySelector('main')
   
@@ -50,6 +47,7 @@ var addNewsMenu = function (data) {
 
     $('<section/>', {
       'class':'content',
+      'style':'display: none',
       'html':'<a><img src="' + newItem.image + '" class="img_news"></a>' +
           		'<article class="news">' +
             	  '<h1 class="head ellipsis"><p class="id_new">' + newItem.id +'</p>' +
@@ -59,6 +57,24 @@ var addNewsMenu = function (data) {
           		'</article>'
     }).appendTo(main);
   })
+
+  /**
+   * Control to behaviour when the user clicks on a new
+   **/
+  $('.intro_news').on('click', function(e) {
+  	$( '.nav h1.head' ).remove()
+  	$( $(this).next()[0] ).clone().appendTo( '.nav' )
+  	if (navigator.userAgent.search('Firefox') != -1) {
+  	  $('.nav .head').css("margin", "10px")
+    }
+
+  	if ($(this).parent().next()[0].style.display == "none") {
+  	  $(this).parent().parent().children(".content").css("display", "none")
+  	  $(this).parent().next().css("display", "flex") 
+  	} else {
+  	  $(this).parent().next().css("display", "none")
+  	}
+  });
 }
 
 

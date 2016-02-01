@@ -6,8 +6,12 @@
   flex-flow: row wrap;
 }
 
-main, .head {
-  /*visibility: hidden;*/
+.top_news {
+  visibility: hidden;
+}
+
+.content {
+  display: none;
 }
 
 .nav, .top_news, .content{
@@ -96,7 +100,6 @@ main, .head {
     padding: 19.1875px 0;
   }
   .head {
-  	font-size: 0.6em;
   	padding: 19.1875px 0;
   }
 }*/
