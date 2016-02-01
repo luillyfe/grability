@@ -1,0 +1,22 @@
+{
+  "name": "grability",
+  "version": "1.0.0",
+  "description": "Code challenge from grability",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.6.1",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "test": "npm test",
+    "start": "node ./bin/www"
+  },
+  "keywords": [
+    "responsive",
+    "design"
+  ],
+  "author": "Fermin Blanco",
+  "license": "ISC"
+}

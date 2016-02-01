@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+var app = require('../app');
+var port = process.env.PORT || 4000;
+
+app.set('port', port);
+
+app.listen(port, function() {
+  console.log('Hello, Grability Team!! http://localhost:' + port);
+});
