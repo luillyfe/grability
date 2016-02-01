@@ -5,6 +5,15 @@ body, p, img, a, div, nav, ul, li, svg, path, h1, p, main, section,
   padding: 0;
 }
 
+section {
+  min-height: 50px;
+}
+
+main {
+  order: 2;
+  width: 100%;
+}
+
 .header__menu {
   order: 1;
 
@@ -35,6 +44,7 @@ body, p, img, a, div, nav, ul, li, svg, path, h1, p, main, section,
   border-radius: 10px 10px 0 0;
   max-height: 47px;
   margin-bottom: 5%;
+  margin-bottom: 24px;
 
   display: -webkit-flex;
   display: flex;
@@ -42,14 +52,21 @@ body, p, img, a, div, nav, ul, li, svg, path, h1, p, main, section,
   flex-flow: row wrap;
 }
 
+.nav .head {
+  padding: 2% 0;
+  padding: 9.59375px 0;
+  font-size: 0.7em;
+}
+
 .head {
   order: 2;
   
-  width: 75%;
+  max-width: 75%;
   max-height: 47px;
 
   font-size: 0.5em;
   padding: 3% 0;
+  padding: 19.1875px 0;
 
   display: -webkit-flex;
   display: flex;
@@ -61,6 +78,7 @@ body, p, img, a, div, nav, ul, li, svg, path, h1, p, main, section,
   order: 1;
   max-width: 15%;
   margin-right: auto;
+  padding: 1% 0;
 }
 
 .title_new {
@@ -69,20 +87,16 @@ body, p, img, a, div, nav, ul, li, svg, path, h1, p, main, section,
   margin-right: auto;
 }
 
-main {
-  order: 2;
-  width: 100%;
-}
-
-section {
-  min-height: 50px;
+section .title_new {
+  max-height: 20px;
 }
 
 /* Required for avoid the text-overflow */
 .ellipsis {
   text-overflow: ellipsis;
 
-  overflow: scroll;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .top_news {
@@ -100,6 +114,7 @@ section {
 
 .top_news .head {
   padding: 5% 0;
+  padding: 19.1875px 0;
 }
 
 .intro_news {
@@ -150,6 +165,7 @@ section {
 
 .news div {
   max-height: 80px;
+  font-size: 0.7em;
   
   overflow:scroll;
 }
@@ -161,14 +177,4 @@ section {
 
 .uppercase {
     text-transform: uppercase;
-}
-
-.c4 {
-  color: #333;
-  background-color: #d5dfef;
-}
-
-.c5 {
-  color: #333;
-  background-color: #dfe1e5;
 }

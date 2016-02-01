@@ -10,22 +10,34 @@ main, .head {
   /*visibility: hidden;*/
 }
 
-.nav, .top_news, .content, .c4, .c5 {
+.nav, .top_news, .content{
   width: 100%;
 }
 
 @media screen and (min-width: 500px) {
+  .ellipsis {
+  	white-space: normal;
+  }
   .nav {	
     max-height: 89px;
   }
   .news div {
-    max-height: 120px;
+    max-height: 80px;
   }
   .head, .news div {
-	font-size: 1.2em;
+	font-size: 0.8em;
   }
   .intro_news {
     margin: auto;
+  }
+  .news .head {
+  	max-width: 100%;
+  }
+  .nav .head {
+    font-size: 0.9em;
+  }
+  section .title_new {
+  	max-height: 47px;
   }
 }
 
@@ -35,18 +47,57 @@ main, .head {
     min-height: 70px;
   }
   .title_new {
-  	max-width: 85%;
+  	max-width: 90%;
+  }
+  .head, .news div {
+	font-size: 1em;
+  }
+  .news .head {
+  	font-size: 0.9em;
+  }
+  .nav .head {
+    font-size: 1.1em;
+  }
+  section .title_new {
+  	min-height: 55px;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .container {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
   .head, .news div {
-	font-size: 1.5em;
+	font-size: 1.2em;
+  }
+  .news .head {
+  	font-size: 1em;
+  }
+  .nav .head {
+    font-size: 1.3em;
+  }
+  .news div {
+  	/*margin-top: 5%;*/
+    max-height: 130px;
   }
 }
+
+/** Firefox styles fix **/
+/*.firefox {
+  .nav {
+  	margin-bottom: 24px;
+  }
+  .nav .head {
+  	padding: 9.59375px 0;
+  }
+  .top_news .head {
+    padding: 19.1875px 0;
+  }
+  .head {
+  	font-size: 0.6em;
+  	padding: 19.1875px 0;
+  }
+}*/
 
