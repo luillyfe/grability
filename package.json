@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "Code challenge from grability",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "chai": "^3.5.0",
+    "expect": "^1.14.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.4.5",
+    "superagent": "^1.7.2"
+  },
   "devDependencies": {
     "express": "^4.13.4",
     "morgan": "^1.6.1",
     "path": "^0.12.7"
   },
   "scripts": {
-    "test": "npm test",
+    "test": "mocha test/test.js",
     "start": "node ./bin/www"
   },
   "keywords": [
